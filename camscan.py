@@ -1,19 +1,9 @@
-import requests
+import requests, os, urllib3, cv2, io, threading, uuid, logging, time, ipaddress, argparse
 from requests.exceptions import RequestException, Timeout
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime
-import os
-import urllib3
-import cv2
 from PIL import Image
-import io
-import threading
-import uuid
-import logging
 from queue import Queue, Empty
-import time
-import ipaddress
-import argparse
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
