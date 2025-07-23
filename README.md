@@ -1,78 +1,68 @@
-# **CAMSCAN - IP Camera Scanner**
 
------
+## CAMSCAN
 
-## **What it does**
+# CamScan is a Python utility for IP camera discovery on networks.
 
-  - **Spots cams fast** - Checks for 60+ camera makes and types.
-  - **Grabs proof** - Snaps pics from live feeds.
-  - **Cracks weak logins** - Tries 50+ common username/password combos.
-  - **Works with all stream types** - Handles HTTP, RTSP, and MJPEG.
-  - **Goes easy on networks** - Adapts its speed to prevent slowdowns.
+## Capabilities
 
------
+* **Comprehensive Detection:** Identifies over **60 IP camera manufacturers/types** via signature analysis.
+* **Visual Confirmation:** Automatically **captures screenshots** from live camera feeds.
+* **Credential Auditing:** Tests over **50 common default username/password combinations**.
+* **Multi-Protocol Support:** Integrates with **HTTP, RTSP, and MJPEG**.
+* **Adaptive Load Management:** Adjusts scanning speed to **minimize network congestion**.
 
-## **Get Started**
+---
 
-### **1. Install stuff**
+## Getting Started
+
+#### 1. Installation
+
+Install dependencies:
 
 ```bash
 pip install requests opencv-python pillow urllib3
+
 ```
 
-### **2. Run it**
+----------
 
-```bash
-# Scan one network
-python camfind.py --target 192.168.1.0/24
+## Usage
 
-# Scan specific IPs
-python camfind.py --target 192.168.1.10,192.168.1.11
+Run CamScan from your terminal:
 
-# Max speed scan
-python camfind.py --workers 30 --target 10.0.0.0/16
+#### Examples:
+
+-   **Single IP:**
 ```
-
-### **3. Check the finds** 📂
-
-  - **`found_cameras.txt`** - List of cams found.
-  - **`camera_screenshots/`** - Where the pictures go.
-
------
-
-## **Why use this?**
-
-I built CamFind because other tools were either blind or too aggressive. This one:
-
-✔ **Actually finds cameras** - Not just random web servers.
-✔ **Confirms visually** - No more guessing if it's a real camera.
-✔ **Plays nice** - Won't wreck your network.
-
------
-
-## **uses**
-
-  - **Security pros** - Find hidden cams in offices.
-  - **Home users** - Map all smart cameras at home.
-  - **IT admins** - Inventory surveillance gear.
-
------
-
-## **Heads up\!** ⚠️
-
-*Use this tool responsibly. Unauthorized scanning is against the law in most places.*
-
-# 🚨 **ILLEGAL EXAMPLE (DO NOT USE)** 🚨
-
-```bash
-python camfind.py --target 0.0.0.0/0 
+python camscan.py -t 192.168.1.100
 ```
-# Scans the entire internet (illegal and very irresponsible)
+- **IP Range (CIDR):**
+```
+python camscan.py -t 192.168.1.0/24
+```
+- **Multiple IPs (comma-separated):**
+```
+python camscan.py -t 192.168.1.10,192.168.1.15
+```
+## Options
 
------
+-   `-w` / `--workers`: Set concurrent threads.
+    
+-   `-T` / `--timeout`: Set request timeout (seconds).
+    
+-   `-R` / `--retries`: Set request retries.
+    
+-   `-v` / `--verbose`: Enable detailed logging.
 
-## **The Guts** 
+## Important Legal Notice
 
-  - **Lightweight** - Few dependencies, runs almost anywhere Python does.
-  - **Clear output** - Easy to see what's happening.
-  - **Flexible speed** - From careful pokes to full-on sweeps.
+**Using CamScan to access or scan unauthorized networks or devices is illegal** This includes public networks or those belonging to others without explicit, documented permission. Unauthorized access can lead to severe legal penalties.
+
+This tool is for **legitimate security assessments, personal network management, and educational purposes only, on networks/devices you own or have permission to test.**
+
+### **Example of Illegal Use (DO NOT ATTEMPT):**
+
+Scanning IP ranges like `172.16.0.0/16` or `8.8.8.0/24` (public ranges) without consent is strictly prohibited and illegal. For example, **do not run this command**:
+```
+python camscan.py -t 8.8.8.0/24
+```
