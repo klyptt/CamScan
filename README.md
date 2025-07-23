@@ -1,7 +1,7 @@
 
-## CAMSCAN
+# CAMSCAN
 
-# CamScan is a Python utility for IP camera discovery on networks.
+## CamScan is a Python utility for IP camera discovery on networks.
 
 ## Capabilities
 
