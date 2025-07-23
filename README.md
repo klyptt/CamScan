@@ -56,11 +56,11 @@ python camscan.py -t 192.168.1.10,192.168.1.15
 
 ## Important Legal Notice
 
-**Using CamScan to access or scan unauthorized networks or devices is illegal** This includes public networks or those belonging to others without explicit, documented permission. Unauthorized access can lead to severe legal penalties.
+Using CamScan to access or scan unauthorized networks or devices is illegal This includes public networks or those belonging to others without explicit, documented permission. Unauthorized access can lead to severe legal penalties.
 
-This tool is for **legitimate security assessments, personal network management, and educational purposes only, on networks/devices you own or have permission to test.**
+This tool is for legitimate security assessments, personal network management, and educational purposes only, on networks/devices you own or have permission to test.
 
-### **Example of Illegal Use (DO NOT ATTEMPT):**
+### Example of Illegal Use (DO NOT ATTEMPT):
 
 Scanning IP ranges like `172.16.0.0/16` or `8.8.8.0/24` (public ranges) without consent is strictly prohibited and illegal. For example, **do not run this command**:
 ```
