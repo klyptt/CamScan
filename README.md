@@ -3,7 +3,7 @@
 
 ## CamScan is a Python utility for IP camera discovery on networks.
 
-## Capabilities
+### Capabilities
 
 * **Comprehensive Detection:** Identifies over **60 IP camera manufacturers/types** via signature analysis.
 * **Visual Confirmation:** Automatically **captures screenshots** from live camera feeds.
